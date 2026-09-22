@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+/*Estilos Universales*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700; /* Esto le da el grosor elegante */
+  color: #4a4a4a; /* Un gris oscuro queda más suave que el negro puro */
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+[class^="col-"] {
+  width: 100%;
+  padding: 5px;
+}
+
+.efecto {
+  padding: 5px;
+}
+
+.efecto:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+.logo-pequeño {
+  width: 200px;
+  height: 100px;
+  object-fit: contain; /* Esto evita que la imagen se deforme */
+}
+
+/*Header*/
+header {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 0;
+  padding: 10px;
+  border: 1px solid rgb(61, 61, 61);
+}
+
+.logo {
+  margin: 10px;
+}
+/*Barra de navegación*/
+
+nav li {
+  display: block; /* Esto hace que el ancho sea solo el del texto */
+  padding: 10px 20px; /* Espacio dentro del borde */
+  border: 1px solid #ccc;
+  margin-bottom: 5px; /* Espacio entre botones */
+}
+
+nav li:hover {
+  background-color: rgb(109, 109, 101);
+  color: white;
+  transition: 0.3s;
+}
+
+nav li:hover a {
+  color: white;
+}
+
+.btn-inicio {
+  display: inline-block;
+  background-color: transparent;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 4px;
+  font-weight: bold; /* Esto pone la letra en negrita estándar */
+}
+
+.btn-inicio:hover {
+  background-color: rgb(223, 223, 150);
+  transition: 0.3s;
+}
+
+/*1ºSección*/
+
+.section1 {
+  text-align: center;
+}
+
+.section1 h3 {
+  margin: 20px;
+  padding: 20px;
+}
+
+.section1 h1 {
+  margin: 20px;
+}
+
+/*2ºSección*/
+
+.section2 {
+  margin: 50px;
+}
+
+.primero {
+  border: 1px solid #535151;
+  padding: 20px;
+}
+
+.segundo {
+  border: 1px solid #535151;
+  padding: 20px;
+  display: flex; /* Activamos Flexbox */
+  flex-direction: column; /* Alineamos los hijos en columna (hacia abajo) */
+}
+.section2 h4 {
+  text-align: left;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.section2 img{
+    width: 90%;
+    margin: 10px auto;
+}
+
+.direccion {
+  padding: 10px;
+
+}
+
+.separar {
+  padding: 10px;
+  margin-bottom: 60px;
+}
+
+iframe {
+  display: block;
+  margin: 20px 0;
+  width: 100%;
+}
+
+input,
+textarea {
+  width: 90%; /* Que no toquen los bordes */
+  margin: 10px auto; /* Espaciado arriba/abajo y centrado */
+  padding: 5px;
+  display: block;
+}
+
+.section2 p{
+    margin: 10px;
+}
+
+.btn-enviar {
+  display: block; /* 👈 AGREGA ESTA LÍNEA */
+  background-color: black;
+  color: white;
+  border: none; 
+  padding: 0; 
+  cursor: pointer; 
+  padding: 10px;
+  width: 30%;
+  margin: 10px auto; /* Esto es lo que lo centra, pero necesita el 'display: block' */
+}
+
+/*Footer*/
+
+footer {
+  margin-top: 0;
+  border: 1px solid rgb(61, 61, 61);
+  padding: 60px;
+  background-color: gray;
+  text-align: center;
+}
+
+footer nav a {
+  margin: 0px;
+  display: inline-block; /* Esto hace que el ancho sea solo el del texto */
+  padding: 4px; /* Espacio dentro del borde */
+  border: 0;
+  margin-bottom: 0px; /* Espacio entre botones */
+}
+
+.redes img {
+  width: 35px;   /* Ajusta este número al tamaño que desees */
+  height: 35px;  /* Forzamos que sea un cuadrado perfecto */
+  margin: 5px;
+  object-fit: contain; /* Evita que la imagen se deforme si no es cuadrada */
+  vertical-align: middle; /* Los alinea perfectamente en el eje horizontal */
+}
+
+/* Estilos específicos para armonizar los nuevos campos de la reserva */
+.form-contacto select,
+.form-contacto input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  font-family: "Lato", sans-serif;
+  background-color: white; /* Asegura el fondo limpio */
+  color: #4a4a4a; /* Mismo tono gris suave que tus textos */
+}
+
+/*Flecha*/
+
+.flecha {
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 40px;
+  background-color: transparent;
+  display: flex;
+  position: fixed;
+  bottom: 30px;
+  right: 15px;
+}
+
+.flecha:hover {
+  background-color: rgb(223, 223, 150);
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+@media (min-width: 576px) {
+  nav li {
+    display: inline-block;
+  }
+
+  .col-4 {
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .col-6 {
+    width: 50%;
+  }
+
+  .contenido-banner {
+    flex-direction: column; /* Se ponen uno debajo del otro en móviles */
+    text-align: center;
+  }
+  .texto-der {
+    text-align: center;
+  }
+
+  .encabezado {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .final {
+    align-items: center;
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+}

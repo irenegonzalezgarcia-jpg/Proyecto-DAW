@@ -1,0 +1,66 @@
+/* ==========================================================================
+   ESTILOS EXCLUSIVOS PARA EL CONTENIDO INTERNO DE RESERVAR CITA
+   ========================================================================== */
+
+/* Aseguramos que el formulario ocupe todo su espacio en la columna */
+.form-contacto {
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Pone los inputs uno debajo de otro */
+  margin: 0 auto;
+}
+
+/* Forzamos a que TODOS los inputs, el select y el date midan y se comporten igual */
+.form-contacto input[type="text"],
+.form-contacto input[type="email"],
+.form-contacto input[type="tel"],
+.form-contacto select,
+.form-contacto input[type="date"],
+.form-contacto textarea {
+  width: 100% !important;
+  box-sizing: border-box !important; /* Evita que el padding los ensanche de más */
+  padding: 10px !important;
+  margin-bottom: 15px !important; /* Mismo espacio de separación entre bloques */
+  border: 1px solid #ccc !important;
+  background-color: #ffffff !important;
+  color: #4a4a4a !important;
+  font-family: "Lato", sans-serif !important;
+  font-size: 14px !important;
+  outline: none;
+  border-radius: 0px; /* Quita bordes redondeados automáticos de algunos navegadores */
+}
+
+/* Estilo específico para el textarea para que no se estire feo */
+.form-contacto textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+/* Efecto al hacer clic (Focus) interactivo */
+.form-contacto select:focus,
+.form-contacto input[type="date"]:focus {
+  border-color: #4a4a4a !important;
+}
+
+/* Estilización elegante para quitar la flecha nativa del select y poner una sutil */
+.form-contacto select {
+  cursor: pointer;
+  appearance: none !important; 
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'><path d='M0 3l5 5 5-5z' fill='%234a4a4a'/></svg>") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 15px center !important;
+  padding-right: 30px !important;
+}
+
+/* ==========================================================================
+   ADAPTACIÓN RESPONSIVA (Móvil)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .form-contacto select,
+  .form-contacto input[type="date"] {
+    padding: 12px 10px !important;
+    font-size: 15px !important;
+  }
+}

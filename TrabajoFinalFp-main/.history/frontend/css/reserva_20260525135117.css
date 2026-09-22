@@ -1,0 +1,96 @@
+/* ==========================================================================
+   ESTILOS ESPECÍFICOS PARA LA PÁGINA DE RESERVAR CITA
+   ========================================================================== */
+
+/* Añadimos scroll suave en la pantalla de reservas */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Forzamos a que la columna derecha se alinee limpia arriba en pantallas grandes */
+.segundo.col-6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 10px;
+}
+
+/* Ajustamos el select y el calendario igual que tus inputs del archivo general */
+.form-contacto select,
+.form-contacto input[type="date"] {
+  width: 90%; /* Misma anchura que usas siempre en tus formularios */
+  margin: 10px auto; /* Mismo espaciado y centrado que tus cajas de texto */
+  padding: 5px; /* Mismo grosor interno */
+  display: block; /* Uno debajo de otro */
+  font-family: "Lato", sans-serif;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: #4a4a4a;
+}
+
+/* --- DISEÑO DE LA COLUMNA IZQUIERDA --- */
+
+/* Títulos de las secciones de información */
+.primero h4 {
+  font-family: 'Playfair Display', serif;
+  color: #4a4a4a;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Espaciado para los textos informativos */
+.primero p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Estilos para la lista de condiciones */
+.lista-condiciones {
+  list-style: none; /* Sin puntitos nativos */
+  padding: 0;
+  margin: 10px;
+}
+
+.lista-condiciones li {
+  margin-bottom: 15px; /* Espacio de separación vertical */
+}
+
+/* Estilos para los bloques de horarios */
+.grid-horario p {
+  margin: 5px 10px;
+}
+
+/* Marca de agua al final de la columna izquierda */
+.marca-agua {
+  margin-top: 40px;
+  font-size: 35px;
+  color: #ccc; /* Gris muy sutil */
+  text-align: center;
+}
+
+/* ==========================================================================
+   ADAPTACIÓN RESPONSIVA (MÓVILES) - Sigue tu breakpoint de 768px
+   ========================================================================== */
+@media (max-width: 768px) {
+  
+  .section2 {
+    margin: 30px 15px !important; /* 30px arriba/abajo y solo 15px a los lados */
+  }
+  /* En móviles forzamos que select y date ocupen el 100% real de la columna móvil */
+  .form-contacto select,
+  .form-contacto input[type="date"] {
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  /* Quitamos los márgenes laterales del horario para aprovechar el espacio */
+  .grid-horario p {
+    margin: 5px 0;
+  }
+  
+  /* Reducimos un pelín la marca de agua para que no desplace la pantalla */
+  .marca-agua {
+    font-size: 28px;
+    margin-top: 25px;
+  }
+}

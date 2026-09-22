@@ -1,0 +1,510 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+/* Variables Globales de Color (Arquitectura Centralizada) */
+:root {
+  /* Paleta Premium e Identidad Visual */
+  --accent-pastel: rgb(247, 230, 230);    /* Fondo empolvado para bloques destacados */
+  --text-main: #4a4a4a;                    /* Gris oscuro suave para tipografía de títulos */
+  --text-muted: gray;                      /* Gris neutro para subtítulos y textos secundarios */
+  --text-light: white;                     /* Blanco puro para contraste en banners oscuros */
+  
+  /* Componentes, Enlaces e Inputs */
+  --color-dark: black;                     /* Negro estándar para enlaces y bordes de botones */
+  --color-light: white;                    /* Blanco estándar para textos internos o estados */
+  --border-light: #ccc;                    /* Gris claro estructural para menús */
+  
+  /* Fondos específicos de las Tarjetas de Promociones */
+  --bg-promo-green-light: #e6e8d3;         /* Tono oliva pastel sutil para fondo1 */
+  --bg-promo-green-soft: #dce8d3;          /* Tono verde menta pastel para fondo2 */
+  
+  /* Interactividad y Efectos :hover */
+  --hover-nav: rgb(109, 109, 101);        /* Fondo del menú de navegación al pasar el cursor */
+  --hover-btn: #efeee5;                   /* Fondo idéntico al logo para botones de inicio */
+  
+  /* Bloques Estructurales Mayores */
+  --footer-bg: gray;                       /* Fondo base del footer */
+  --border-header-footer: rgb(61, 61, 61); /* Líneas sutiles de división de bloques */
+}
+
+/* Estilos Universales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700; 
+  color: var(--text-main);
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-dark);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: var(--color-dark);
+}
+
+[class^="col-"] {
+  width: 100%;
+  padding: 5px;
+}
+
+
+
+.logo-pequeño {
+  width: 200px;
+  height: 100px;
+  object-fit: contain; 
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 0;
+  padding: 10px;
+  border: 1px solid var(--border-header-footer);
+  background-color: #efeee5; /* Fondo idéntico al logo */
+}
+
+.logo {
+  margin: 10px;
+}
+
+.logo-pequeño {
+  width: 200px;
+  height: 100px;
+  object-fit: contain; 
+}
+
+/* Barra de Navegación */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: block; /* En móvil se apilan en columna */
+  margin: 5px 0;
+  position: relative; /* Para el dropdown */
+}
+
+nav li > a {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  color: var(--color-dark);
+  border: 1px solid var(--color-dark);
+  background-color: white;
+  text-decoration: none;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+nav li > a:hover {
+  background-color: var(--hover-nav);
+  color: var(--color-light);
+  transition: 0.3s;
+}
+
+/* Menú Desplegable */
+.menu-desplegable {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  background-color: white;
+  min-width: 150px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  z-index: 100;
+  border: 1px solid var(--border-light);
+  padding: 0;
+}
+
+.menu-desplegable li {
+  display: block;
+  border: none;
+  border-bottom: 1px solid #eee;
+  margin: 0;
+  text-align: left;
+  background-color: white;
+}
+
+.menu-desplegable li:last-child {
+  border-bottom: none;
+}
+
+.menu-desplegable li a {
+  color: var(--color-dark) !important;
+  display: block;
+  padding: 10px 15px;
+  border: none;
+  font-weight: normal;
+}
+
+.menu-desplegable li:hover {
+  background-color: var(--accent-pastel);
+}
+
+.menu-desplegable li a:hover,
+.menu-desplegable li:hover a {
+  background-color: var(--accent-pastel);
+  color: var(--color-dark) !important;
+}
+
+.dropdown:hover .menu-desplegable {
+  display: block;
+}
+
+.btn-inicio {
+  display: inline-block;
+  background-color: white;
+  padding: 10px 20px;
+  border: 1px solid var(--color-dark);
+  border-radius: 4px;
+  font-weight: bold; 
+  color: var(--color-dark);
+  white-space: nowrap;
+}
+
+.btn-inicio:hover {
+  background-color: var(--hover-nav);
+  color: var(--color-light);
+  transition: 0.3s;
+}
+
+.btn-pastel:hover {
+  background-color: var(--accent-pastel) !important;
+  color: var(--color-dark) !important;
+}
+
+.btn-beige:hover {
+  background-color: #efeee5 !important;
+  color: var(--color-dark) !important;
+}
+
+/* En móvil apilamos los botones de sesión */
+.botones-sesion {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: stretch;
+  margin-top: 5px;
+}
+
+.botones-sesion .btn-inicio {
+  width: 100%;
+}
+
+/* 1º Sección (Banner de Bienvenida) */
+.section1 {
+  align-items: center; 
+  text-align: center;
+  border: 1px solid var(--border-header-footer);
+  margin: 0;
+  padding: 30px; 
+  background-color: var(--accent-pastel);
+}
+
+section h1 {
+  margin: 40px;
+  text-align: center;
+}
+
+section h3 {
+  text-align: left;
+  margin: 0px 20px;
+  color: var(--text-muted);
+}
+
+.section1 p {
+  text-align: left;
+  margin: 20px;
+}
+
+.btn-conocelos {
+  display: inline-block;
+  border: 1px solid var(--color-dark);
+  background-color: var(--color-light); /* Blanco sobre fondo rosa */
+  margin: 20px 10px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold; 
+  color: var(--color-dark);
+  text-decoration: none;
+}
+
+.btn-conocelos:hover {
+  background-color: #efeee5; /* Hover beige corporativo */
+  transition: 0.3s;
+}
+
+.img1 {
+  width: 80%;
+  margin-bottom: 40px;
+}
+
+/* 2º Sección (Catálogo de Promociones) */
+.section2 {
+  align-items: center; 
+  text-align: center;
+  padding: 30px; 
+  margin: 0;
+  border: 1px solid var(--border-header-footer);
+}
+
+.section2 h3 {
+  color: var(--text-muted);
+  text-align: left;
+}
+
+.section2 h4 {
+  margin: 10px;
+  color: var(--text-muted);
+  text-align: left;
+}
+
+.section2 p {
+  margin: 10px;
+  text-align: left;
+}
+
+.btn-promo {
+  display: inline-block;
+  border: 1px solid var(--color-dark);
+  background-color: var(--accent-pastel); /* Rosa pastel sobre fondo blanco */
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold; 
+  color: var(--color-dark);
+  text-decoration: none;
+}
+
+.btn-promo:hover {
+  background-color: #efeee5; /* Hover beige corporativo */
+  transition: 0.3s;
+}
+
+/* Base común para todas las tarjetas de promo */
+.fondo,
+.fondo1,
+.fondo2,
+.fondo3 {
+  text-align: right;
+  padding: 40px 20px; 
+  margin: 20px 10px;
+  font-weight: bold;
+  min-height: 200px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  border-radius: 4px; 
+}
+
+/* Específico para las que llevan IMAGEN */
+.fondo,
+.fondo3 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Específico para las que llevan COLOR (Pasteles Unificados) */
+.fondo1 {
+  background-color: var(--bg-promo-green-light);
+}
+
+.fondo2 {
+  background-color: var(--bg-promo-green-soft);
+}
+
+/* Rutas de imagen */
+.fondo {
+  background-image: url(../imagenes/pexels-artempodrez-7233312.jpg);
+}
+
+.fondo3 {
+  background-image: url(../imagenes/pexels-artempodrez-7233328.jpg);
+}
+
+.centro-boton {
+  display: flex;
+  justify-content: center; 
+  width: 100%; 
+  margin-top: 20px; 
+  margin-bottom: 20px; 
+}
+
+/* 3º Sección (Banner Emocional de Cierre) */
+.section3 {
+  text-align: center;
+  background-image: url(../imagenes/pexels-arina-krasnikova-6663374.jpg);
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position: center; 
+  padding: 100px 10px;
+  margin: 0;
+  border: 1px solid var(--border-header-footer);  
+  opacity: 0.8;
+}
+
+.section3 h2 {
+  color: var(--text-light);
+}
+
+/* Footer */
+footer {
+  margin-top: 0;
+  border: 1px solid var(--border-header-footer);
+  padding: 60px;
+  background-color: var(--footer-bg);
+  text-align: center;
+}
+
+footer nav a {
+  margin: 0px;
+  display: inline-block; 
+  padding: 4px; 
+  border: 0;
+  margin-bottom: 0px; 
+  font-size: larger;
+  color: var(--color-dark);
+}
+
+.redes img {
+  width: 35px;   
+  height: 35px;  
+  margin: 5px;
+  object-fit: contain; 
+  vertical-align: middle; 
+}
+
+/* Flecha Interactiva (Scroll To Top) */
+.flecha {
+  width: 45px;
+  height: 45px;
+  background-color: var(--color-light);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  z-index: 1000;
+  text-decoration: none;
+  color: var(--color-dark);
+}
+
+.flecha:hover {
+  background-color: var(--accent-pastel);
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+.flecha img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* --- MEDIA QUERIES (Responsividad Nativa) --- */
+
+@media (min-width: 576px) {
+  nav li {
+    display: inline-block;
+    margin: 0 2px;
+    vertical-align: middle;
+  }
+  
+  nav li > a {
+    display: inline-block;
+    width: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .col-6 {
+    width: 50%;
+  }
+
+  .encabezado {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .contenedor-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  
+  .botones-sesion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0;
+  }
+  
+  .botones-sesion .btn-inicio {
+    width: auto;
+  }
+
+  .col-4 {
+    width: 33.33%;
+  }
+  
+  .final {
+    align-items: center;
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+  .col-1 { width: 8.33%; }
+  .col-2 { width: 16.66%; }
+  .col-3 { width: 25%; }
+  .col-4 { width: 33.33%; }
+  .col-5 { width: 41.66%; }
+  .col-6 { width: 50%; }
+  .col-7 { width: 58.33%; }
+  .col-8 { width: 66.66%; }
+  .col-9 { width: 75%; }
+  .col-10 { width: 83.33%; }
+  .col-11 { width: 91.66%; }
+  .col-12 { width: 100%; }
+}

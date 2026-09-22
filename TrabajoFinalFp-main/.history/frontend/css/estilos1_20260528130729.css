@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+/* Variables Globales de Color (Arquitectura Centralizada) */
+:root {
+  /* Paleta Premium e Identidad Visual */
+  --accent-pastel: rgba(247, 177, 72, 0.719); /* El tono dorado/naranja con opacidad del banner */
+  --text-main: #4a4a4a;                    /* Gris oscuro suave para tipografía de títulos */
+  --text-light: white;                     /* Blanco puro para contrastes y textos en cajas oscuras */
+  
+  /* Componentes, Enlaces e Inputs */
+  --color-dark: black;                     /* Negro estándar para enlaces y texto general */
+  --color-light: white;                    /* Blanco estándar para fondos limpios */
+  --border-light: #ccc;                    /* Gris claro de los bordes del menú de navegación */
+  
+  /* Bloques del Catálogo de Tratamientos */
+  --bg-card-dark: rgb(62, 60, 60);         /* Gris oscuro de fondo para la primera tarjeta (.primero) */
+  --border-card: #6c6b6b;                  /* Gris medio para los bordes de las tarjetas de tratamientos */
+  
+  /* Interactividad y Efectos :hover */
+  --hover-nav: rgb(109, 109, 101);        /* Fondo del menú de navegación al pasar el cursor */
+  --hover-btn: rgb(223, 223, 150);        /* Amarillo pastel interactivo de botones y flecha */
+  
+  /* Estructura Base y Footer */
+  --footer-bg: gray;                       /* Fondo base del pie de página */
+  --border-header-footer: rgb(61, 61, 61); /* Líneas sutiles de división de bloques */
+}
+
+/* Estilos Universales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700; 
+  color: var(--text-main); 
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-dark); 
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+body {
+  font-family: "Lato", sans-serif; 
+  color: var(--color-dark);
+}
+
+[class^="col-"] {
+  width: 100%;
+  padding: 5px;
+}
+
+.efecto {
+  padding: 5px;
+  transition: transform 0.3s ease, filter 0.3s ease; /* Suaviza la interactividad visual (UX) */
+}
+
+.efecto:hover {
+  transform: scale(1.1); 
+  filter: brightness(1.1); 
+}
+
+.logo-pequeño {
+  width: 200px;
+  height: 100px;
+  object-fit: contain; 
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 0;
+  padding: 10px;
+  border: 1px solid var(--border-header-footer); 
+}
+
+.logo {
+  margin: 10px;
+}
+
+/* Barra de navegación */
+nav li {
+  display: block; 
+  padding: 10px 20px; 
+  border: 1px solid var(--border-light); 
+  margin-bottom: 5px; 
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav li:hover {
+  background-color: var(--hover-nav); 
+  color: var(--color-light); 
+}
+
+nav li:hover a {
+  color: var(--color-light); 
+}
+
+.btn-inicio {
+  display: inline-block;
+  background-color: transparent;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 1px solid var(--color-dark); 
+  border-radius: 4px;
+  font-weight: bold; 
+}
+
+.btn-inicio:hover {
+  background-color: var(--hover-btn); 
+  transition: 0.3s;
+}
+
+/* 1º Sección (Banner de Encabezado de la Página) */
+.section1 {
+  border: 1px solid var(--border-header-footer); 
+  align-items: center; 
+  text-align: center;
+  padding: 30px; 
+  background-color: var(--accent-pastel); 
+}
+
+.section1 h1 {
+  text-align: left;
+  margin: 10px;
+}
+
+.section1 p {
+  text-align: left;
+  margin: 10px;
+}
+
+.section1 h2 {
+  margin: 10px;
+}
+
+/* 2º Sección (Grilla de Tratamientos) */
+.section2 {
+  text-align: center;
+  margin: 100px;
+}
+
+.section2 h3 {
+  text-align: left;
+  padding: 10px;
+}
+
+.section2 p {
+  padding: 10px;
+  text-align: left;
+}
+
+.primero {
+  border: 1px solid var(--border-card); 
+  background-color: var(--bg-card-dark); 
+  color: var(--text-light); 
+  text-align: left;
+  padding: 20px;
+}
+
+.segundo {
+  border: 1px solid var(--border-card); 
+  text-align: center;
+  padding: 10px;
+}
+
+.tratamientos img {
+  width: 100%;
+  height: 100%; 
+  aspect-ratio: 1 / 1; 
+  object-fit: cover; 
+  display: block;
+}
+
+.sexto {
+  border: 1px solid var(--border-card); 
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  margin-top: 0;
+  border: 1px solid var(--border-header-footer); 
+  padding: 60px;
+  background-color: var(--footer-bg); 
+  text-align: center;
+}
+
+footer nav a {
+  margin: 0px;
+  display: inline-block; 
+  padding: 4px; 
+  border: 0;
+  margin-bottom: 0px; 
+  color: var(--color-dark);
+}
+
+.redes img {
+  width: 35px;   
+  height: 35px;  
+  margin: 5px;
+  object-fit: contain; 
+  vertical-align: middle; 
+}
+
+/* Flecha Interactiva (Scroll To Top) */
+.flecha {
+  padding: 5px;
+  border: 1px solid var(--color-dark); 
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-light); /* Mantiene consistencia visual con fondo sólido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 30px;
+  right: 15px;
+  z-index: 999;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.flecha img {
+  width: 20px;
+  height: 20px;
+}
+
+.flecha:hover {
+  background-color: var(--hover-btn); 
+  transform: scale(1.1); 
+  filter: brightness(1.1); 
+}
+
+/* --- MEDIA QUERIES (Responsividad Nativa) --- */
+
+@media (min-width: 576px) {
+  nav li {
+    display: inline-block; 
+  }
+
+  .col-4 {
+    width: 50%; 
+  }
+}
+
+@media (min-width: 768px) {
+  .col-6 {
+    width: 50%; 
+  }
+
+  .contenido-banner {
+    flex-direction: column; 
+    text-align: center;
+  }
+  
+  .texto-der {
+    text-align: center;
+  }
+
+  .encabezado {
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+  }
+  
+  .col-4 {
+    width: 33.33%; 
+  }
+  
+  .final {
+    align-items: center; 
+  }
+}
+
+@media (min-width: 1200px) {
+  .col-1 { width: 8.33%; } 
+  .col-2 { width: 16.66%; } 
+  .col-3 { width: 25%; } 
+  .col-4 { width: 33.33%; } 
+  .col-5 { width: 41.66%; } 
+  .col-6 { width: 50%; } 
+  .col-7 { width: 58.33%; } 
+  .col-8 { width: 66.66%; } 
+  .col-9 { width: 75%; } 
+  .col-10 { width: 83.33%; } 
+  .col-11 { width: 91.66%; } 
+  .col-12 { width: 100%; } 
+}

@@ -1,0 +1,111 @@
+/* Variables Globales de Color (Integradas para coherencia con el proyecto) */
+:root {
+  /* Paleta Premium e Identidad Visual */
+  --text-main: #4a4a4a;                    /* Gris oscuro suave para títulos y textos */
+  --text-watermark: #ccc;                  /* Gris sutil para la marca de agua y bordes[cite: 10] */
+  
+  /* Componentes, Enlaces e Inputs */
+  --color-light: white;                    /* Blanco estándar para fondos de inputs[cite: 10] */
+  --border-light: #ccc;                    /* Gris estructural para los bordes[cite: 10] */
+}
+
+/* Añadimos scroll suave en la pantalla de reservas */
+html {
+  scroll-behavior: smooth; /*[cite: 10] */
+}
+
+/* Forzamos a que la columna derecha se alinee limpia arriba en pantallas grandes */
+.segundo.col-6 {
+  display: flex; /*[cite: 10] */
+  flex-direction: column; /*[cite: 10] */
+  justify-content: flex-start; /*[cite: 10] */
+  padding-top: 10px; /*[cite: 10] */
+}
+
+/* Ajustamos el select y el calendario igual que tus inputs del archivo general */
+.form-contacto select,
+.form-contacto input[type="date"] {
+  width: 90%; /* Misma anchura que usas siempre en tus formularios[cite: 10] */
+  margin: 10px auto; /* Mismo espaciado y centrado que tus cajas de texto[cite: 10] */
+  padding: 5px; /* Mismo grosor interno[cite: 10] */
+  display: block; /* Uno debajo de otro[cite: 10] */
+  font-family: "Lato", sans-serif; /*[cite: 10] */
+  border: 1px solid var(--border-light); /* Antes: #ccc[cite: 10] */
+  background-color: var(--color-light); /* Antes: white[cite: 10] */
+  color: var(--text-main); /* Antes: #4a4a4a[cite: 10] */
+}
+
+/* --- DISEÑO DE LA COLUMNA IZQUIERDA --- */
+
+/* Títulos de las secciones de información */
+.primero h4 {
+  font-family: 'Playfair Display', serif; /*[cite: 10] */
+  color: var(--text-main); /* Antes: #4a4a4a[cite: 10] */
+  margin-top: 20px; /*[cite: 10] */
+  margin-bottom: 10px; /*[cite: 10] */
+}
+
+/* Espaciado para los textos informativos */
+.primero p {
+  margin-bottom: 15px; /*[cite: 10] */
+  line-height: 1.5; /*[cite: 10] */
+}
+
+/* Estilos para la lista de condiciones */
+.lista-condiciones {
+  list-style: none; /* Sin puntitos nativos[cite: 10] */
+  padding: 0; /*[cite: 10] */
+  margin: 10px; /*[cite: 10] */
+}
+
+.lista-condiciones li {
+  margin-bottom: 15px; /* Espacio de separación vertical[cite: 10] */
+}
+
+/* Estilos para los bloques de horarios */
+.grid-horario p {
+  margin: 5px 10px; /*[cite: 10] */
+}
+
+/* Marca de agua al final de la columna izquierda */
+.marca-agua {
+  margin-top: 40px; /*[cite: 10] */
+  font-size: 35px; /*[cite: 10] */
+  color: var(--text-watermark); /* Antes: #ccc[cite: 10] */
+  text-align: center; /*[cite: 10] */
+}
+
+/* --- MEDIA QUERIES --- */
+
+@media (max-width: 768px) {
+  
+  /* Forzamos a la sección a usar el ancho completo reduciendo los márgenes generales */
+  section.section2 {
+    margin: 20px 10px; /* Margen muy pequeñito para que la caja se estire[cite: 10] */
+    padding: 10px; /*[cite: 10] */
+  }
+
+  /* Forzamos a que las columnas de la reserva ocupen toda la fila en el móvil */
+  .section2 .row .col-6 {
+    width: 100%; /*[cite: 10] */
+    margin-bottom: 20px; /* Separación para que el formulario no pegue a los textos[cite: 10] */
+  }
+
+  /* En móviles hacemos que select y date ocupen el 100% real de la caja */
+  .form-contacto select,
+  .form-contacto input[type="date"] {
+    width: 100%; /*[cite: 10] */
+    margin: 10px 0; /*[cite: 10] */
+  }
+  
+  /* Quitamos los márgenes del horario para aprovechar el espacio del teléfono */
+  .grid-horario p {
+    margin: 5px 0; /*[cite: 10] */
+  }
+  
+  /* Reducimos la marca de agua para que encaje bien abajo */
+  .marca-agua {
+    font-size: 28px; /*[cite: 10] */
+    margin-top: 25px; /*[cite: 10] */
+  }
+}

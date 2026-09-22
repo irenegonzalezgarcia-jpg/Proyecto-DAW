@@ -1,0 +1,55 @@
+/* ==========================================================================
+   ESTILOS EXCLUSIVOS PARA EL CONTENIDO INTERNO DE RESERVAR CITA
+   ========================================================================== */
+
+/* Ajuste del formulario para que mantenga la misma anchura que el de contacto */
+.form-contacto {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* El Selector de tratamientos y el Input de Fecha con la misma esencia */
+.form-contacto select,
+.form-contacto input[type="date"] {
+  width: 100%;
+  padding: 12px 10px; /* Misma holgura que tus inputs de texto */
+  margin-bottom: 20px; /* Mismo espaciado vertical */
+  border: 1px solid #ccc; /* El mismo borde fino gris */
+  background-color: #ffffff; /* Fondo blanco limpio */
+  color: #4a4a4a; /* Tu gris oscuro suave para el texto */
+  font-family: "Lato", sans-serif; /* Tu tipografía corporativa para textos */
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+/* Efecto al hacer clic (Focus) igual que en el resto de la web */
+.form-contacto select:focus,
+.form-contacto input[type="date"]:focus {
+  border-color: #4a4a4a; /* Se oscurece al tono gris de tus titulares */
+}
+
+/* Estilización de la flecha del desplegable para que quede fina y elegante */
+.form-contacto select {
+  cursor: pointer;
+  appearance: none; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* Insertamos una flecha sutil en el lateral derecho */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'><path d='M0 3l5 5 5-5z' fill='%234a4a4a'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  padding-right: 30px;
+}
+
+/* ==========================================================================
+   ADAPTACIÓN PARA PANTALLAS MÓVILES (Esencia Responsive)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .form-contacto select,
+  .form-contacto input[type="date"] {
+    padding: 14px 10px; /* Un pelín más grandes en móvil para pulsar mejor con el dedo */
+    font-size: 15px;
+  }
+}

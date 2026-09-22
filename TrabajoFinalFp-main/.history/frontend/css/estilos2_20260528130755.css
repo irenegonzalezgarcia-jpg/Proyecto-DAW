@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+/* Variables Globales de Color (Arquitectura Centralizada) */
+:root {
+  /* Paleta Premium e Identidad Visual */
+  --text-main: #4a4a4a;                    /* Gris oscuro suave para tipografía de títulos */
+  --text-muted: gray;                      /* Gris neutro para subtítulos y textos secundarios */
+  
+  /* Componentes, Enlaces e Inputs */
+  --color-dark: black;                     /* Negro estándar para enlaces y botones */
+  --color-light: white;                    /* Blanco estándar para textos internos o estados */
+  --border-light: #ccc;                    /* Gris claro estructural para menús */
+  
+  /* Bloques Específicos del Formulario de Contacto */
+  --border-form-box: #535151;              /* El gris oscuro de los bordes de tus secciones .primero y .segundo */
+  
+  /* Interactividad y Efectos :hover */
+  --hover-nav: rgb(109, 109, 101);        /* Fondo del menú de navegación al pasar el cursor */
+  --hover-btn: rgb(223, 223, 150);        /* Amarillo pastel interactivo de botones y flecha */
+  
+  /* Bloques Estructurales Mayores */
+  --footer-bg: gray;                       /* Fondo base del footer */
+  --border-header-footer: rgb(61, 61, 61); /* Líneas sutiles de división de bloques */
+}
+
+/* Estilos Universales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700; 
+  color: var(--text-main); /* Antes: #4a4a4a */
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-dark); /* Antes: black */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+[class^="col-"] {
+  width: 100%;
+  padding: 5px;
+}
+
+.efecto {
+  padding: 5px;
+}
+
+.efecto:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+.logo-pequeño {
+  width: 200px;
+  height: 100px;
+  object-fit: contain; 
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 0;
+  padding: 10px;
+  border: 1px solid var(--border-header-footer); /* Antes: rgb(61, 61, 61) */
+}
+
+.logo {
+  margin: 10px;
+}
+
+/* Barra de navegación */
+nav li {
+  display: block; 
+  padding: 10px 20px; 
+  border: 1px solid var(--border-light); /* Antes: #ccc */
+  margin-bottom: 5px; 
+}
+
+nav li:hover {
+  background-color: var(--hover-nav); /* Antes: rgb(109, 109, 101) */
+  color: var(--color-light); /* Antes: white */
+  transition: 0.3s;
+}
+
+nav li:hover a {
+  color: var(--color-light); /* Antes: white */
+}
+
+.btn-inicio {
+  display: inline-block;
+  background-color: transparent;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 1px solid var(--color-dark); /* Antes: black */
+  border-radius: 4px;
+  font-weight: bold; 
+}
+
+.btn-inicio:hover {
+  background-color: var(--hover-btn); /* Antes: rgb(223, 223, 150) */
+  transition: 0.3s;
+}
+
+/* 1º Sección */
+.section1 {
+  text-align: center;
+}
+
+.section1 h3 {
+  margin: 20px;
+  padding: 20px;
+}
+
+.section1 h1 {
+  margin: 20px;
+}
+
+/* 2º Sección (Formulario y Datos de Contacto) */
+.section2 {
+  margin: 50px;
+}
+
+.primero {
+  border: 1px solid var(--border-form-box); /* Antes: #535151 */
+  padding: 20px;
+}
+
+.segundo {
+  border: 1px solid var(--border-form-box); /* Antes: #535151 */
+  padding: 20px;
+  display: flex; 
+  flex-direction: column; 
+}
+
+.section2 h4 {
+  text-align: left;
+  padding: 10px;
+  margin-bottom: 30px;
+  color: var(--text-muted); /* Vinculado a tus textos secundarios para dar coherencia */
+}
+
+.section2 img {
+    width: 90%;
+    margin: 10px auto;
+}
+
+.direccion {
+  padding: 10px;
+}
+
+.separar {
+  padding: 10px;
+  margin-bottom: 60px;
+}
+
+iframe {
+  display: block;
+  margin: 20px 0;
+  width: 100%;
+}
+
+input,
+textarea {
+  width: 90%; 
+  margin: 10px auto; 
+  padding: 5px;
+  display: block;
+}
+
+.section2 p {
+    margin: 10px;
+}
+
+.btn-enviar {
+  display: block; 
+  background-color: var(--color-dark); /* Antes: black */
+  color: var(--color-light); /* Antes: white */
+  border: none; 
+  cursor: pointer; 
+  padding: 10px;
+  width: 30%;
+  margin: 10px auto; 
+}
+
+/* Footer */
+footer {
+  margin-top: 0;
+  border: 1px solid var(--border-header-footer); /* Antes: rgb(61, 61, 61) */
+  padding: 60px;
+  background-color: var(--footer-bg); /* Antes: gray */
+  text-align: center;
+}
+
+footer nav a {
+  margin: 0px;
+  display: inline-block; 
+  padding: 4px; 
+  border: 0;
+  margin-bottom: 0px; 
+  color: var(--color-dark);
+}
+
+.redes img {
+  width: 35px;   
+  height: 35px;  
+  margin: 5px;
+  object-fit: contain; 
+  vertical-align: middle; 
+}
+
+/* Flecha */
+.flecha {
+  padding: 5px;
+  border: 1px solid var(--color-dark); /* Antes: black */
+  border-radius: 50%;
+  width: 40px;
+  background-color: transparent;
+  display: flex;
+  position: fixed;
+  bottom: 30px;
+  right: 15px;
+}
+
+.flecha:hover {
+  background-color: var(--hover-btn); /* Antes: rgb(223, 223, 150) */
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+/* --- MEDIA QUERIES --- */
+
+@media (min-width: 576px) {
+  nav li {
+    display: inline-block;
+  }
+
+  .col-4 {
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .col-6 {
+    width: 50%;
+  }
+
+  .contenido-banner {
+    flex-direction: column; 
+    text-align: center;
+  }
+  
+  .texto-der {
+    text-align: center;
+  }
+
+  .encabezado {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .col-4 {
+    width: 33.33%;
+  }
+  
+  .final {
+    align-items: center;
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+  .col-1 { width: 8.33%; }
+  .col-2 { width: 16.66%; }
+  .col-3 { width: 25%; }
+  .col-4 { width: 33.33%; }
+  .col-5 { width: 41.66%; }
+  .col-6 { width: 50%; }
+  .col-7 { width: 58.33%; }
+  .col-8 { width: 66.66%; }
+  .col-9 { width: 75%; }
+  .col-10 { width: 83.33%; }
+  .col-11 { width: 91.66%; }
+  .col-12 { width: 100%; }
+}

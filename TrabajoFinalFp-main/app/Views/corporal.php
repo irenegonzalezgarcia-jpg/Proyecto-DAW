@@ -1,0 +1,94 @@
+<!--1º Sección-->
+<section class="section1 row">
+    <div class="col-6">
+        <h1>Tratamientos corporales</h1>
+        <p>Combinamos aparatología de última generación con cosmética natural, tras el diagnóstico y diseño de
+            un plan de actuación desarrollado por nuestro equipo de profesionales.</p>
+    </div>
+    <div class="col-6">
+        <h3>Los tratamientos corporales siguen la filosofía slow beauty para cuidar y cubrir las necesidades de
+            cada cuerpo</h3>
+    </div>
+</section>
+
+<!--2º Sección-->
+<section class="section2">
+    <div class="tratamientos row">
+        <div class="primero col-4">
+            <p>Experiencias únicas de relajación y bienestar personalizadas para conseguir los resultados
+                esperados y mantenerlos en el tiempo.</p>
+        </div>
+        <div class="segundo col-4">
+            <h3>Radiofrencuencia corporal</h3>
+            <p>La radiofrecuencia corporal con Indiba te ayuda a recuperar la firmeza y tonicidad de la piel
+                allá donde lo necesites.
+                Es una técnica que trabaja a nivel interno de la célula de forma innovadora y totalmente
+                indolora.</p>
+        </div>
+        <div class="segundo col-4">
+            <h3>Criolipólisis </h3>
+            <p>La criolipólisis es un procedimiento corporal de estética avanzada que utiliza el frío para
+                reducir la grasa corporal localizada en diferentes partes del cuerpo, logrando un adelgazamiento
+                selectivo y una remodelación corporal.
+                Elimina eficazmente y de forma indolora la grasa localizada con resultados visibles desde la
+                primera sesión.</p>
+
+        </div>
+        <div class="segundo col-4">
+            <h3>Anticelulítico</h3>
+            <p>El tratamiento anticelulítico específico con cafeterapia de Massada ataca la celulitis con una
+                revolucionaría fórmula de cafeína que activa el metabolismo y contribuye a la eliminación de
+                toxinas y líquidos.</p>
+
+        </div>
+        <div class="segundo col-4">
+            <h3>Ondas de choque</h3>
+            <p>Las ondas de choque son una técnica poco invasiva y eficaz para eliminar la grasa localizada y
+                mejorar el aspecto de la piel. Consiste en aplicar ondas acústicas radiales sobre las células
+                adiposas para mejorar la circulación sanguínea y linfática y fomentar la regeneración de los
+                tejidos.
+                Elimina la grasa y la celulitis, reduce el volumen, reafirma la piel y remodela el cuerpo.</p>
+
+        </div>
+        <div class="sexto col-4"><img src="/imagenes/pexels-tima-miroshnichenko-6186740.jpg" alt=""></div>
+        <div class="sexto col-4"><img src="/imagenes/pexels-anntarazevich-6560304.jpg" alt=""></div>
+        <div class="segundo col-4">
+            <h3>Presoterapia</h3>
+            <p>La presoterapia es un método terapéutico natural que, a través de una aparatología específica
+                (botas de comprensión), estimula la circulación mediante la aplicación de presiones sobre las
+                distintas partes del cuerpo.
+                Reduce la celulitis, elimina las toxinas y remodela la silueta corporal. Tiene multitud de
+                beneficios sobre el sistema circulatorio.
+            </p>
+
+        </div>
+        <div class="segundo col-4">
+            <h3>Tratamiento LPG</h3>
+            <p>El LPG es un tratamiento de estimulación celular mecánica, 100% natural y no invasivo, que actúa
+                como una "gimnasia cutánea" profunda para el cuerpo. Reactiva la eliminación natural de grasas y
+                la producción de colágeno para una silueta firme y sin celulitis.Redefine tu cuerpo y alisa tu
+                piel con la tecnología de estimulación celular que respeta tu organismo.</p>
+
+        </div>
+        <div class="segundo col-4">
+            <h3>Depilación con cera</h3>
+            <p>La cera sigue siendo uno de los métodos de depilación facial más demandados. En Inspire Beauty
+                utilizamos ceras naturales de baja fusión de gran elasticidad y cremosidad para acabar con el
+                vello facial de forma respetuosa con tu piel.
+                En el caso de las cejas, podemos estudiar las facciones de tu rostro y hacer el diseño de cejas
+                que aporte te aporte más armonía.
+            </p>
+
+        </div>
+        <div class="segundo col-4">
+            <h3>Masajes estéticos</h3>
+            <p>Estos masajes estéticos ofrecen una agradable sensación de bienestar, trabajando específicamente
+                distintas zonas del cuerpo para eliminar imperfecciones y resolver problemáticas concretas.
+                Puede incluir una sesión de presoterapia de 20 minutos para potenciar los efectos del masaje.
+            </p>
+
+        </div>
+        <div class="sexto col-4"><img src="/imagenes/pexels-marine-fougere-2159237528-35884502.jpg" alt=""></div>
+
+    </div>
+</section>

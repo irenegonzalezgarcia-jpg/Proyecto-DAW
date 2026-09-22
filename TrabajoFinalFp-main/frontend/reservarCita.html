@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspire Beauty - Reservar Cita</title>
+    <link rel="stylesheet" href="css/estilos2.css">
+    <link rel="stylesheet" href="css/reserva.css">
+    <link rel="shortcut icon" href="imagenes/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="inicio">
+        <div class="encabezado">
+            <div class="logo">
+                <a href="index.html"><img src="imagenes/logo.png" alt="logo" class="logo-pequeño"></a>
+            </div>
+
+            <!--Barra de navegación-->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="facial.html">Facial</a></li>
+                    <li><a href="corporal.html">Corporal</a></li>
+                    <li><a href="reservarCita.html" class="destacado">Reservar cita</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div>
+                <a href="login.html" class="btn-inicio efecto">Iniciar sesión</a>
+            </div>
+        </div>
+    </header>
+
+    <!--Section-->
+    <main>
+        <section class="section2">
+            <div class="row">
+
+                <div class="primero col-6">
+                    <h3>RESERVA TU MOMENTO</h3>
+                    <p>En <strong>Inspire Beauty</strong> queremos ofrecerte una experiencia única y personalizada desde
+                        el primer instante. Gestiona tu solicitud de cita previa de forma online en menos de un minuto.
+                    </p>
+
+                    <h4>INFORMACIÓN IMPORTANTE:</h4>
+                    <ul class="lista-condiciones">
+                        <li>🕒 <strong>Confirmación:</strong> Tras recibir tu solicitud, nuestro equipo se pondrá en
+                            contacto contigo para confirmar la hora exacta de tu sesión.</li>
+                        <li>❌ <strong>Cancelaciones:</strong> Si no puedes asistir, por favor avísanos con un mínimo de
+                            24 horas de antelación para liberar la cabina.</li>
+                        <li>📍 <strong>Puntualidad:</strong> Recomendamos llegar 5 minutos antes para garantizar la
+                            duración completa de tu tratamiento.</li>
+                    </ul>
+
+                    <h4>NUESTRO HORARIO DE ATENCIÓN:</h4>
+                    <div class="grid-horario">
+                        <p><strong>Lunes a Viernes:</strong> 09:00h - 20:00h</p>
+                        <p><strong>Sábados:</strong> 10:00h - 14:00h</p>
+                        <p><strong>Domingos:</strong> Cerrado</p>
+                    </div>
+
+                    <h1 class="marca-agua">Inspire Beauty</h1>
+                </div>
+
+                <div class="segundo col-6">
+                    <h4>SOLICITA TU CITA:</h4>
+                    <form class="form-contacto" id="formReserva" novalidate>
+                        <input type="text" id="nombreReserva" name="nombre" placeholder="Nombre y apellidos*" required>
+                        <input type="email" id="emailReserva" name="mail" placeholder="Email*" required>
+                        <input type="tel" id="telefonoReserva" name="telefono" placeholder="Teléfono*" required>
+
+                        <select id="selectServicio" name="servicio" required>
+                            <option value="" disabled selected>Selecciona un tratamiento*</option>
+                            <option value="Higiene Facial">Higiene Facial Avanzada</option>
+                            <option value="Radiofrecuencia">Radiofrecuencia Rejuvenecedora</option>
+                            <option value="Masaje Relajante">Masaje Relajante Corporal</option>
+                            <option value="Tratamiento Reductor">Tratamiento Corporal Reductor</option>
+                        </select>
+
+                        <input type="date" id="fechaCita" name="fecha" required>
+                        <textarea id="mensajeReserva" name="comentarios"
+                            placeholder="Notes adicionales o preferencias médicas..."></textarea>
+
+                        <button type="submit" class="btn-enviar">Solicitar Cita</button>
+                    </form>
+                    <p>*Campos obligatorios</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!--Flecha a inicio-->
+    <div class="flecha">
+        <a href="#inicio"><img src="imagenes/flecha-hacia-arriba.png" alt="subir"></a>
+    </div>
+
+
+    <!--Footer-->
+    <footer class="row final">
+        <div class="col-4">
+            <a href="index.html"><img src="imagenes/logo.png" alt="logo" class="logo-pequeño"></a>
+        </div>
+        <nav class="col-4">
+            <a href="index.html">Inicio</a>
+            <a href="facial.html">Facial</a>
+            <a href="corporal.html">Corporal</a>
+            <a href="reservarCita.html">Reservar cita</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+        <div class="col-4 redes">
+            <div>
+                <img src="imagenes/facebook.png" alt="Facebook">
+                <img src="imagenes/instagram.png" alt="Instagram">
+                <img src="imagenes/whatsapp.png" alt="WhatsApp">
+            </div>
+        </div>
+        <div class="col-12">
+            <p>© 2026 Inspire Beauty - Centro de estética. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/reserva.js"></script>
+
+</body>
+
+</html>

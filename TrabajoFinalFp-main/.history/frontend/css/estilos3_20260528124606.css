@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+/* Variables Globales de Color (Arquitectura Centralizada) */
+:root {
+  /* Paleta Premium e Identidad Visual */
+  --accent-pastel: rgb(247, 230, 230);    /* Fondo empolvado para bloques destacados */
+  --text-main: #4a4a4a;                    /* Gris oscuro suave para tipografía elegante */
+  --gold: #c5a059;                         /* Dorado corporativo para elementos de acento */
+  
+  /* Componentes, Enlaces e Inputs */
+  --color-dark: black;                     /* Negro estándar para textos primarios y botones */
+  --color-light: white;                    /* Blanco para contrastes limpios y fondos */
+  --border-light: #ccc;                    /* Gris claro estructural para menús */
+  
+  /* Interactividad y Efectos :hover */
+  --hover-nav: rgb(109, 109, 101);        /* Fondo del menú al pasar el cursor */
+  --hover-btn: rgb(223, 223, 150);        /* Amarillo pastel interactivo de flecha e inicio */
+  
+  /* Bloques Estructurales Mayores */
+  --footer-bg: gray;                       /* Fondo base del footer */
+  --border-header-footer: rgb(61, 61, 61); /* Líneas sutiles de división */
+}
+
+/* Estilos Universales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-dark);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  color: var(--color-dark);
+}
+
+main {
+  flex: 1;
+}
+
+[class^="col-"] {
+  width: 100%;
+  padding: 5px;
+}
+
+.efecto {
+  padding: 5px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.efecto:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+.logo-pequeño {
+  width: 200px;
+  height: 100px;
+  object-fit: contain;
+}
+
+/* Header Estructural */
+header {
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  border: 1px solid var(--border-header-footer);
+}
+
+.logo {
+  margin: 10px;
+}
+
+/* Barra de Navegación */
+nav li {
+  display: block;
+  padding: 10px 20px;
+  border: 1px solid var(--border-light);
+  margin-bottom: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav li:hover {
+  background-color: var(--hover-nav);
+  color: var(--color-light);
+}
+
+nav li:hover a {
+  color: var(--color-light);
+}
+
+.btn-inicio {
+  display: inline-block;
+  background-color: transparent;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 1px solid var(--color-dark);
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.btn-inicio:hover {
+  background-color: var(--hover-btn);
+  transition: 0.3s;
+}
+
+/* Primera Sección / Contenedores de Login */
+.section1 {
+  margin: 50px;
+}
+
+.section1 h1 {
+  margin: 30px 20px;
+}
+
+.section1 h3 {
+  margin: 30px 20px;
+}
+
+/* Cuadro Informativo Exclusivo (Mejora UX) */
+.txt-exclusivo {
+  background-color: var(--accent-pastel);
+  color: var(--text-main);
+  padding: 14px;
+  border-left: 5px solid var(--gold);
+  font-size: 16px;
+  margin: 20px;
+  border-radius: 4px;
+  display: inline-block;
+  max-width: 90%;
+  line-height: 1.5;
+}
+
+.txt-exclusivo i {
+  color: var(--gold);
+  margin-right: 8px;
+}
+
+.enlace {
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.btn-sesion {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  width: 90%;
+  margin: 10px auto;
+}
+
+.btn-registro {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-registro, .btn-cuenta {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  border: 1px solid var(--color-dark);
+  cursor: pointer;
+  padding: 10px;
+  width: 90%;
+  margin: 10px auto;
+}
+
+input {
+  width: 90%;
+  margin: 20px auto;
+  padding: 8px;
+  display: block;
+  border: 1px solid var(--border-light);
+  border-radius: 4px;
+}
+
+.section1 img {
+  margin-top: 30px;
+  border-radius: 8px;
+}
+
+/* Footer General */
+footer {
+  margin-top: 0;
+  border: 1px solid var(--border-header-footer);
+  padding: 60px;
+  background-color: var(--footer-bg);
+  text-align: center;
+}
+
+footer nav a {
+  margin: 0px;
+  display: inline-block;
+  padding: 4px;
+  border: 0;
+  margin-bottom: 0px;
+  color: var(--color-dark);
+}
+
+.redes img {
+  width: 35px;
+  height: 35px;
+  margin: 5px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+/* Flecha Interactiva (Scroll To Top) */
+.flecha {
+  padding: 5px;
+  border: 1px solid var(--color-dark);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 30px;
+  right: 15px;
+  z-index: 999;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.flecha img {
+  width: 20px;
+  height: 20px;
+}
+
+.flecha:hover {
+  background-color: var(--hover-btn);
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+/* --- MEDIA QUERIES (Filosofía Mobile First) --- */
+
+@media (min-width: 576px) {
+  nav li {
+    display: inline-block;
+  }
+
+  .col-4 {
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .col-6 {
+    width: 50%;
+  }
+
+  .contenido-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .texto-der {
+    text-align: center;
+  }
+
+  .encabezado {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .col-4 {
+    width: 33.33%;
+  }
+  
+  .final {
+    align-items: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .col-1 { width: 8.33%; }
+  .col-2 { width: 16.66%; }
+  .col-3 { width: 25%; }
+  .col-4 { width: 33.33%; }
+  .col-5 { width: 41.66%; }
+  .col-6 { width: 50%; }
+  .col-7 { width: 58.33%; }
+  .col-8 { width: 66.66%; }
+  .col-9 { width: 75%; }
+  .col-10 { width: 83.33%; }
+  .col-11 { width: 91.66%; }
+  .col-12 { width: 100%; }
+}

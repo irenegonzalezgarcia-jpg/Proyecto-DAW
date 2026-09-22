@@ -83,15 +83,48 @@ El proyecto destaca por su arquitectura **Vanilla**, prescindiendo deliberadamen
 
 ## ⚙️ Cómo ejecutar y abrir la aplicación web en tu ordenador
 
-> 💡 **Nota importante:** Este proyecto está desarrollado en **PHP 8 con arquitectura MVC y base de datos SQLite**, por lo que **no** se ejecuta abriendo directamente los archivos `.html` o `.php` en el navegador. Requiere levantar un entorno de servidor web local.
+> 💡 **Nota importante:** Este proyecto está desarrollado en PHP 8 con arquitectura MVC y base de datos SQLite, por lo que no se ejecuta abriendo directamente los archivos `.html` o `.php` en el navegador. Requiere levantar un entorno de servidor web local.
 
 ### Opción 1: La forma más rápida (Servidor interno de PHP)
-*Recomendado: no necesitas XAMPP ni herramientas externas, solo tener PHP instalado en tu equipo.*
+
+*Recomendado: no necesitas XAMPP ni herramientas externas, solo tener PHP instalado en tu equipo y accesible en el sistema.*
 
 1. **Abrir la terminal en la raíz del proyecto:**
    * Entra a la carpeta del proyecto en tu explorador de archivos.
-   * En la barra de direcciones de la carpeta, escribe `cmd` y presiona `Enter` (o abre la carpeta en VS Code y abre la terminal integrada con `Ctrl + Ñ`).
+   * En la barra de direcciones de la carpeta, escribe `cmd` y presiona `Enter` (o abre la carpeta en VS Code y usa el atajo `Ctrl + Ñ`).
 2. **Levantar el servidor web:**
    Ejecuta el siguiente comando apuntando al punto de entrada público (`public`):
    ```bash
    php -S localhost:8000 -t public
+   ```
+3. **Acceder a la aplicación:**
+   * Abre tu navegador web y entra en: [http://localhost:8000](http://localhost:8000).
+4. **Detener el servidor:**
+   * Pulsa `Ctrl + C` en la terminal para apagar el servicio.
+
+---
+
+### Opción 2: Despliegue tradicional (XAMPP / Laragon).
+
+Si prefieres trabajar con una suite de servidores locales:
+
+1. **Ubicación de archivos:**
+   * Mueve o clona la carpeta del proyecto dentro del directorio raíz del servidor:
+     * En XAMPP: `C:\xampp\htdocs\TrabajoFinalFp`
+     * En Laragon: `C:\laragon\www\TrabajoFinalFp`
+2. **Iniciar servicios:**
+   * Abre el panel de control de tu servidor e inicia exclusivamente el servicio **Apache**.
+   * *(Nota: El servicio MySQL debe permanecer apagado, ya que la persistencia se realiza íntegramente sobre el archivo SQLite local y no requiere un gestor SQL externo)*.
+3. **Acceder a la aplicación:**
+   * Abre tu navegador e ingresa a: `http://localhost/TrabajoFinalFp/public`.
+
+---
+
+## 🔑 Credenciales de Acceso para Pruebas
+
+Para agilizar la evaluación de los distintos roles y flujos de la plataforma, se encuentran disponibles las siguientes cuentas de prueba precargadas:
+
+| Rol | Correo Electrónico | Contraseña | Vistas y Permisos |
+| :--- | :--- | :--- | :--- |
+| **Administrador (Staff)** | `admin@inspirebeauty.es` | `admin123` | Acceso a `/admin` (Back-Office, métricas financieras, CRM, gestión de agenda y catálogo. |
+| **Cliente Estándar** | `prueba@prueba.com` | `cliente123` | Acceso a `/mi-panel` (historial transaccional, solicitud y cancelación autónoma de citas). |
